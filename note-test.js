@@ -5,12 +5,20 @@ function testNoteObjectExists() {
 
 };
 
-function testTakeTextFromNote() {
+function testStoreTextFromNote() {
   var textInput = "Test"
   var note = new Note(textInput)
 
   assert.isTrue(note.text === textInput);
 };
 
+function testPrintText(){
+  var textInput = "Test"
+  var note = new Note(textInput)
+
+  assert.isTrue(note.printText() === "Test")
+};
+
 testNoteObjectExists();
-testTakeTextFromNote();
+testStoreTextFromNote();
+testPrintText();
