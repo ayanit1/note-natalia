@@ -9,9 +9,7 @@ function testTakeTextFromNote() {
   var textInput = "Test"
   var note = new Note(textInput)
 
-  if (note.text != textInput){
-    throw new Error("Not equal to textInput")
-  }
+  assert.isTrue(note.text === textInput);
 };
 
 testNoteObjectExists();
