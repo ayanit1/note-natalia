@@ -2,7 +2,6 @@ function testNoteObjectExists() {
   var note = new Note();
 
   assert.isTrue(typeof note === "object");
-
 };
 
 function testStoreTextFromNote() {
