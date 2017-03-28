@@ -1,9 +1,16 @@
 function testReturnsHTML() {
-  var notelist = new notelist;
+  var notelist = new List();
   notelist.createANote("Hello Albert")
   notelist.createANote("Hello Natalia")
-  var listView = new listView(notelist.arrayOfNotes)
-  assert.isTrue(listView.printHTML() === "<ul><li>Hello Albert</li><li>Hello Natalia</li></ul>")
+  var listview = new listView(notelist.arrayOfNotes)
+  assert.isTrue(listview.printHTML() === "<ul><li>Hello Albert</li><li>Hello Natalia</li></ul>");
+};
+
+function testHandlesNoNotes(){
+  var notelist = new List();
+  var listview = new listView(notelist.arrayofNotes)
+  assert.isTrue(listview.printHTML() === "<ul><li>No printed notes</li></ul>")
 }
 
 testReturnsHTML();
+testHandlesNoNotes();
