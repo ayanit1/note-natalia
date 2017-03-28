@@ -2,7 +2,6 @@
 
   function List(){
     this.arrayOfNotes = [];
-    this.noteCount = this.arrayOfNotes.length;
   };
 
   List.prototype.createANote = function(string) {

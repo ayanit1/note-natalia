@@ -1,15 +1,13 @@
 (function(exports) {
 
-  function listView(notelist) {
-      this.notelist = notelist;
-      console.log(this.notelist)
+  function listView(listToPrint) {
+      this.listToPrint = listToPrint;
   };
 
   listView.prototype.printHTML = function (){
-    console.log(this.notelist)
-    if (this.notelist) {
+    if (this.listToPrint.length !== 0) {
       var li = ''
-      this.notelist.forEach(function(note){
+      this.listToPrint.forEach(function(note){
         li += "<li>" + note.text + "</li>"
       });
       return "<ul>" + li + "</ul>"
