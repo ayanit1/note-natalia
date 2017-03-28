@@ -18,13 +18,6 @@ function testPrintText(){
   assert.isTrue(note.printText() === "Test")
 };
 
-function testStoreArrayOfNoteModels(){
-  var notelist = new List();
-
-  assert.isTrue(notelist.arrayOfNotes.length === 0)
-};
-
 testNoteObjectExists();
 testStoreTextFromNote();
 testPrintText();
-testStoreArrayOfNoteModels();
